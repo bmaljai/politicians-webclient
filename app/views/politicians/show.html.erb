@@ -1,0 +1,36 @@
+<table id = "politician-details">
+<tr>
+<td colspan = "2">
+<h1><%= @politician["full_name"] %></h1>
+</td>
+</tr>
+<tr>
+  <th>Birthdate</th>
+  <td><%= @politician["birthdate"] %></td>
+</tr>
+<tr>
+  <th>Age</th>
+  <td><%= @politician["age"] %></td>
+</tr>  
+<tr>
+  <th>Party</th>
+  <td><%= @politician["party"] %></td>
+</tr>  
+<tr>
+  <th>Current Office</th>
+  <td><%= @politician["current_office"] %></td>
+</tr> 
+<tr>
+  <th>Total Years Service</th>
+  <td><%= @politician["total_years_service"] %></td>
+</tr>    
+<tr>
+  <th>Donors</th>
+  <td>
+    <% @politician["donors"].each do |donor|%>
+      <p> <%= "#{donor["donor_name"]}: $#{donor["donor_total_contribution"]}" %></p>
+      
+    <% end %>
+  </td>
+</tr>       
+</table>

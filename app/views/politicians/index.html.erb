@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <th>Politician Name</th>
+    <th>Birthdate</th>
+    <th>Age</th>
+    <th>Party</th>
+    <th>Current Office</th>
+    <th>Total Years Service</th>
+    <th>Total Donor Contributions</th>
+  </tr>
+  <% @politicians.each do |politician|%>
+    <tr>
+      <td><%= politician["full_name"] %></td>
+      <td><%= politician["birthdate"] %></td>
+      <td><%= politician["age"] %></td>
+      <td><%= politician["party"] %></td>
+      <td><%= politician["current_office"] %></td>
+      <td><%= politician["total_years_service"] %></td>
+      <td>$<%= total_donor_contributions(politician) %></td>
+    </tr>
+  <% end %>
+
+
+</table>

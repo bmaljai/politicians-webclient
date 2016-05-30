@@ -10,12 +10,13 @@
   </tr>
   <% @politicians.each do |politician|%>
     <tr>
-      <td><%= politician["full_name"] %></td>
+      <td><%= link_to "#{politician["full_name"]}", controller: "politicians", action: "show", id: politician["id"]  %></td>
       <td><%= politician["birthdate"] %></td>
       <td><%= politician["age"] %></td>
       <td><%= politician["party"] %></td>
-      <td><%= politician["current_office"] %></td>
+      <td><%= politician["current_office"].capitalize %></td>
       <td><%= politician["total_years_service"] %></td>
+      <!-- call to politician helper method -->
       <td>$<%= total_donor_contributions(politician) %></td>
     </tr>
   <% end %>

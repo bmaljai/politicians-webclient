@@ -8,10 +8,11 @@
 
 }
 
-td {
+table{
   border: 1px solid black;
 }
 
-th {
+td, th {
   border: 1px solid black;
+  padding: 7px;
 }

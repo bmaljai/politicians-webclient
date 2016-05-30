@@ -1,0 +1,30 @@
+<%= form_tag "/politicians" do %>
+
+<div>
+  <%= label_tag :first_name %>
+  <%= text_field_tag  :first_name %>
+</div>
+<div>
+  <%= label_tag :last_name %>
+  <%= text_field_tag :last_name %>
+</div>
+<div>
+  <%= label_tag :birthdate %>
+  <%= text_field_tag :birthdate %>
+</div>
+<div>
+  <%= label_tag :party %>
+  <%= text_field_tag :party %>
+</div>
+<div>
+  <%= label_tag :total_years_service %>
+  <%= text_field_tag :total_years_service %>
+</div>
+<div>
+  <%= label_tag :current_office %>
+  <%= text_field_tag :current_office %>
+</div>
+
+<%= submit_tag "Add Politician" %>
+
+<%end%>

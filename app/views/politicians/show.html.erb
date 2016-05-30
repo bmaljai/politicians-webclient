@@ -18,7 +18,7 @@
 </tr>  
 <tr>
   <th>Current Office</th>
-  <td><%= @politician["current_office"] %></td>
+  <td><%= @politician["current_office"].capitalize %></td>
 </tr> 
 <tr>
   <th>Total Years Service</th>
@@ -34,3 +34,4 @@
   </td>
 </tr>       
 </table>
+<%= link_to "Return to Index", controller: "politicians", action: "index" %>

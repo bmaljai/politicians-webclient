@@ -1,0 +1,31 @@
+<%= form_tag "/politicians/#{@politician["id"]}", method: :patch do %>
+
+<div>
+  <%= label_tag :first_name %>
+  <%= text_field_tag  :first_name, @politician["first_name"] %>
+</div>
+<div>
+  <%= label_tag :last_name %>
+  <%= text_field_tag :last_name, @politician["last_name"] %>
+</div>
+<div>
+  <%= label_tag :birthdate %>
+  <%= text_field_tag :birthdate, @politician["birthdate"] %>
+</div>
+<div>
+  <%= label_tag :party %>
+  <%= @politician["party"] %>
+  <%= select_tag :party, options_for_select([['Democrat', true],['Republican',false]],(@politician["party"]=='Democrat')) %>
+</div>
+<div>
+  <%= label_tag :total_years_service %>
+  <%= text_field_tag :total_years_service, @politician["total_years_service"] %>
+</div>
+<div>
+  <%= label_tag :current_office %>
+  <%= text_field_tag :current_office, @politician["current_office"] %>
+</div>
+
+<%= submit_tag "Update Politician" %>
+
+<%end%>

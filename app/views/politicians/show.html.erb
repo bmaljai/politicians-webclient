@@ -34,4 +34,6 @@
   </td>
 </tr>       
 </table>
-<%= link_to "Return to Index", controller: "politicians", action: "index" %>
+<div><%= link_to "Return to Index", controller: "politicians", action: "index" %></div>
+<div><%= link_to "Edit", controller: "politicians", action: "edit", id: @politician["id"] %></div>
+<div><%= link_to "Delete", "/politicians/#{@politician['id']}", {method: :delete}%></div>
